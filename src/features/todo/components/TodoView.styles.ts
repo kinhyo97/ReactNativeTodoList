@@ -4,8 +4,6 @@ export const createStyles = (theme: any) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      marginTop: 40,
-      // ❌ backgroundColor 없음
     },
 
     input: {

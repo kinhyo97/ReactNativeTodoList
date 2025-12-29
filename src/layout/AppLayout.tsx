@@ -17,7 +17,7 @@ export default function AppLayout({ children }: Props) {
       style={{
         flex: 1,
         backgroundColor: theme.background.primary,
-        padding:10,
+        paddingTop:20,
       }}
     >
       {children}

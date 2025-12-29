@@ -1,9 +1,10 @@
-import { View, Text } from "react-native";
+// import OnlyCalendarView from "@/features/todo/screens/OnlyCalendarView";
+// import { View } from "react-native";
 
-export default function CalendarScreen() {
-  return (
-    <View>
-      <Text>Calendar Screen</Text>
-    </View>
-  );
-}
+// export default function CalendarScreen() {
+//   return (
+//     <View style={{ flex: 1, backgroundColor: "white" }}>
+//       <OnlyCalendarView />
+//     </View>
+//   );
+// }

@@ -9,6 +9,14 @@ export interface Todo {
   updatedAt?: string;
   description?: string;
   reminderTime?: string | null;
+  date: string;
+  reminderOffset?: number | null;
+  notificationId?: string | null;
+  category?: {
+    id: number;
+    name: string;
+    color: string;
+  };
 }
 
 /** Todo 생성 요청 */

@@ -18,6 +18,7 @@ type Styles = {
   modalBox: ViewStyle;
   input: TextStyle;
   modalActions: ViewStyle;
+  dateBox: ViewStyle;
 };
 
 export const createComponentStyles = (theme): Styles => ({
@@ -34,8 +35,9 @@ export const createComponentStyles = (theme): Styles => ({
     borderRadius: 12,
 
     paddingHorizontal: 16,
-    paddingVertical: 12,
-    marginBottom: 12,
+    paddingVertical: 6,
+    marginBottom: 4,
+    marginHorizontal: 12,
 
     // iOS shadow
     shadowColor: "#000",
@@ -70,7 +72,7 @@ export const createComponentStyles = (theme): Styles => ({
   },
 
   deleteText: {
-    color: theme.text.tertiary,
+    color: theme.text.primary,
   },
 
   checkbox: {
@@ -97,12 +99,14 @@ export const createComponentStyles = (theme): Styles => ({
     backgroundColor: "rgba(0,0,0,0.55)",
     justifyContent: "center",
     padding: 20,
+    paddingBottom:5,
   },
 
   modalBox: {
     backgroundColor: theme.background.secondary,
     borderRadius: 12,
     padding: 16,
+    transform: [{ translateY: -0 }],
   },
 
   input: {
@@ -118,4 +122,18 @@ export const createComponentStyles = (theme): Styles => ({
     justifyContent: "flex-end",
     gap: 10,
   },
+
+  dateBox: {
+  flex: 1,
+  height: 44,
+  borderRadius: 10,
+
+  borderWidth: 1,
+  borderColor: theme.border.medium,
+  backgroundColor: theme.background.secondary,
+
+  justifyContent: "center",
+  alignItems: "center",
+},
+
 });

@@ -26,6 +26,11 @@ export function YearMonthPickerModal({
   const years = Array.from({ length: 20 }, (_, i) => 2018 + i);
   const months = Array.from({ length: 12 }, (_, i) => i + 1);
 
+  // 오늘로 가기 버튼
+  const today = new Date();
+  const todayYear = today.getFullYear();
+  const todayMonth = today.getMonth() + 1;
+
   return (
     <Modal visible={visible} transparent animationType="slide">
       <View
@@ -62,6 +67,24 @@ export function YearMonthPickerModal({
             <Pressable onPress={() => onConfirm(year, month)}>
               <Text style={{ color: "#0ea5e9", fontWeight: "600" }}>
                 확인
+              </Text>
+            </Pressable>
+          </View>
+
+          <View style={{ alignItems: "center", marginBottom: 8 }}>
+            <Pressable
+              onPress={() => {
+                const today = new Date();
+                const y = today.getFullYear();
+                const m = today.getMonth() + 1;
+
+                setYear(y);
+                setMonth(m);
+                onConfirm(y, m); // ← 바로 이동
+              }}
+            >
+              <Text style={{ color: "#0ea5e9", fontSize: 13 }}>
+                오늘로 이동
               </Text>
             </Pressable>
           </View>
